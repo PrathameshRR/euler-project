@@ -6,9 +6,10 @@ package main
 
 var largest_prime_factor int = 0
 var num int = 600851475143
+
 // find factors of a number
 
-func main() { 
+func main() {
 	find_factors(num)
 }
 
@@ -24,11 +25,10 @@ func is_prime(num int) bool {
 func find_factors(num int) {
 	for i := 2; i <= num; i++ {
 		if num%i == 0 {
-			// print("\n",i)
-			// check if factor is prime
+
 			if is_prime(i) {
 				largest_prime_factor = i
-				print("\n",largest_prime_factor)
+				print("\n", largest_prime_factor)
 			}
 		}
 	}
